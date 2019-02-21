@@ -15,7 +15,7 @@ p {
   grid-column-gap       : 3px;
   grid-row-gap          : 3px;
   grid-template-columns : 20% 80%;
-  grid-template-rows    : 6rem auto 5rem;
+  grid-template-rows    : 5rem auto 3rem;
   grid-template-areas   : "nav head"
                           "nav main"
                           "nav foot";
