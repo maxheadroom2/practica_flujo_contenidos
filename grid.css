@@ -1,7 +1,13 @@
-div,
-p {
+body,
+div {
   font-family : 'Quicksand',
                 sans-serif;
+}
+
+p {
+  display         : flex;
+  align-items     : center;
+  justify-content : flex-start;
 }
 
 /*! revisar mas datos aqui  https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas */
@@ -33,8 +39,10 @@ p {
   display          : flex;
   background-color : #ffa08c;
   align-items      : center;
-  justify-content  : space-around;
+  flex-direction   : column;
+  justify-content  : center;
   grid-area        : nav;
+  min-width: 161px;
 }
 
 #page > main {
@@ -43,6 +51,7 @@ p {
   align-items      : center;
   justify-content  : space-around;
   grid-area        : main;
+  min-width: 378px;
 }
 
 #page > footer {
