@@ -52,3 +52,57 @@ p {
   justify-content  : space-around;
   grid-area        : foot;
 }
+
+
+@media
+  only screen
+  and (max-width : 600px) {
+
+
+    #page {
+      display               : grid;
+      width                 : 100vw;
+      height                : 100vh;
+      margin                : 5px;
+      padding               : 0;
+      grid-column-gap       : 3px;
+      grid-row-gap          : 3px;
+      grid-template-columns : 20% 80%;
+      grid-template-rows    : 4rem auto 200px;
+      grid-template-areas   : "head head"
+                              "main main"
+                              "foot foot";
+    }
+
+    #page > header {
+      display          : flex;
+      background-color : #8ca0ff;
+      align-items      : center;
+      justify-content  : space-around;
+      grid-area        : head;
+    }
+
+    #page > nav {
+      display          : flex;
+      background-color : #ffa08c;
+      align-items      : center;
+      justify-content  : space-around;
+      grid-area        : nav;
+    }
+
+    #page > main {
+      display          : flex;
+      background-color : #ffff64;
+      align-items      : center;
+      justify-content  : space-around;
+      grid-area        : main;
+    }
+
+    #page > footer {
+      display          : flex;
+      background-color : #8cffa0;
+      align-items      : center;
+      justify-content  : space-around;
+      grid-area        : foot;
+
+  }
