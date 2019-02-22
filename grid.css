@@ -10,6 +10,10 @@ p {
   justify-content : flex-start;
 }
 
+.boton {
+  visibility : hidden;
+}
+
 /*! revisar mas datos aqui  https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas */
 
 #page {
@@ -60,56 +64,64 @@ p {
   grid-area        : foot;
 }
 
+/*! aqui normalmente va lo del mobil y abajo dentro de la media Q va lo de escritorio, yo lo realize alrevez */
 
 @media
   only screen
-  and (max-width : 1200px) {
-
-
-    #page {
-      display               : grid;
-      width                 : 100vw;
-      height                : 100vh;
-      margin                : 5px;
-      padding               : 0;
-      grid-column-gap       : 3px;
-      grid-row-gap          : 3px;
-      grid-template-columns : 20% 80%;
-      grid-template-rows    : 10% 80% 10%;
-      grid-template-areas   : "head head"
-                              "main main"
-                              "foot foot";
-    }
-
-    #page > header {
-      display          : flex;
-      background-color : #8ca0ff;
-      align-items      : center;
-      justify-content  : space-around;
-      grid-area        : head;
-    }
-
-    #page > nav {
-      display          : flex;
-      background-color : #ffa08c;
-      align-items      : center;
-      justify-content  : space-around;
-      grid-area        : nav;
-    }
-
-    #page > main {
-      display          : flex;
-      background-color : #ffff64;
-      align-items      : center;
-      justify-content  : space-around;
-      grid-area        : main;
-    }
-
-    #page > footer {
-      display          : flex;
-      background-color : #8cffa0;
-      align-items      : center;
-      justify-content  : space-around;
-      grid-area        : foot;
-
+  and (max-width : 500px) {
+  #page {
+    display               : grid;
+    width                 : 100vw;
+    height                : 100vh;
+    margin                : 5px;
+    padding               : 0;
+    grid-column-gap       : 3px;
+    grid-row-gap          : 3px;
+    grid-template-columns : 20% 80%;
+    grid-template-rows    : 10% 80% 10%;
+    grid-template-areas   : "head head"
+                            "main main"
+                            "foot foot";
   }
+
+  #page > header {
+    display          : flex;
+    background-color : #8ca0ff;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : head;
+  }
+
+  #page > nav {
+    display          : flex;
+    background-color : #ffa08c;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : nav;
+    margin: 1px;
+  }
+
+  #page > main {
+    display          : flex;
+    background-color : #ffff64;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : main;
+  }
+
+  #page > footer {
+    display          : flex;
+    background-color : #8cffa0;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : foot;
+  }
+
+  .boton {
+    display         :  inline-flex;
+    visibility      : visible;
+    /* align-items     : center; */
+    justify-content :  flex-end;
+    background: #f47763;
+  }
+}
