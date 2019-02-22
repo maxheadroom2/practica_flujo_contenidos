@@ -42,7 +42,6 @@ p {
   flex-direction   : column;
   justify-content  : center;
   grid-area        : nav;
-  min-width: 161px;
 }
 
 #page > main {
@@ -51,7 +50,6 @@ p {
   align-items      : center;
   justify-content  : space-around;
   grid-area        : main;
-  min-width: 378px;
 }
 
 #page > footer {
