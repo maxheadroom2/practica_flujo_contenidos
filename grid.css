@@ -1,7 +1,17 @@
-div,
-p {
+body,
+div {
   font-family : 'Quicksand',
                 sans-serif;
+}
+
+p {
+  display         : flex;
+  align-items     : center;
+  justify-content : flex-start;
+}
+
+.boton {
+  visibility : hidden;
 }
 
 /*! revisar mas datos aqui  https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas */
@@ -15,7 +25,7 @@ p {
   grid-column-gap       : 3px;
   grid-row-gap          : 3px;
   grid-template-columns : 20% 80%;
-  grid-template-rows    : 4rem auto 200px;
+  grid-template-rows    : 5rem auto 3rem;
   grid-template-areas   : "nav head"
                           "nav main"
                           "nav foot";
@@ -33,7 +43,8 @@ p {
   display          : flex;
   background-color : #ffa08c;
   align-items      : center;
-  justify-content  : space-around;
+  flex-direction   : column;
+  justify-content  : center;
   grid-area        : nav;
 }
 
@@ -51,4 +62,66 @@ p {
   align-items      : center;
   justify-content  : space-around;
   grid-area        : foot;
+}
+
+/*! aqui normalmente va lo del mobil y abajo dentro de la media Q va lo de escritorio, yo lo realize alrevez */
+
+@media
+  only screen
+  and (max-width : 500px) {
+  #page {
+    display               : grid;
+    width                 : 100vw;
+    height                : 100vh;
+    margin                : 5px;
+    padding               : 0;
+    grid-column-gap       : 3px;
+    grid-row-gap          : 3px;
+    grid-template-columns : 20% 80%;
+    grid-template-rows    : 10% 80% 10%;
+    grid-template-areas   : "head head"
+                            "main main"
+                            "foot foot";
+  }
+
+  #page > header {
+    display          : flex;
+    background-color : #273fb0;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : head;
+  }
+
+  #page > nav {
+    display          : flex;
+    background-color : #ffa08c;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : nav;
+    margin: 1px;
+  }
+
+  #page > main {
+    display          : flex;
+    background-color : #32e243;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : main;
+  }
+
+  #page > footer {
+    display          : flex;
+    background-color : #c28cff;
+    align-items      : center;
+    justify-content  : space-around;
+    grid-area        : foot;
+  }
+
+  .boton {
+    display         :  inline-flex;
+    visibility      : visible;
+    /* align-items     : center; */
+    justify-content :  flex-end;
+    background: #f47763;
+  }
 }
